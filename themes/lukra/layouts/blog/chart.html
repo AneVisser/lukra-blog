@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="lukra-root">
+  <header class="masthead">
+    <div class="inner">
+      {{ partial "masthead-top.html" . }}
+      <div class="meta">
+        {{ with .Params.scope }}<span><b>Scope</b> {{ . }}</span>{{ end }}
+        {{ with .Params.benchmarks }}<span><b>Benchmarks</b> {{ . }}</span>{{ end }}
+        {{ with .Params.basis }}<span><b>Basis</b> {{ . }}</span>{{ end }}
+        {{ with .Params.workbook }}<span><b>Workbook</b> {{ . }}</span>{{ end }}
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}

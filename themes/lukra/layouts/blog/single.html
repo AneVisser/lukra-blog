@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="lukra-root">
+  <header class="masthead">
+    <div class="inner">
+      {{ partial "masthead-top.html" . }}
+      <div class="meta"><span class="date">{{ if .Params.displayDate }}{{ .Params.displayDate }}{{ else }}{{ .Date.Format "January 2006" }}{{ end }}</span></div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <article class="post-body">{{ .Content }}</article>
+    {{ partial "post-footer.html" . }}
+  </div>
+</div>
+{{ end }}

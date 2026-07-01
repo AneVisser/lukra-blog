@@ -1,0 +1,28 @@
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{- $pageTitle := .Title }}
+{{- if .Params.seoTitle }}{{ $pageTitle = .Params.seoTitle }}{{ end }}
+{{- $description := .Params.stand }}
+{{- if .Params.seoDescription }}{{ $description = .Params.seoDescription }}{{ end }}
+{{- $ogTitle := $pageTitle }}
+{{- if .Params.ogTitle }}{{ $ogTitle = .Params.ogTitle }}{{ end }}
+{{- $ogDescription := .Params.stand }}
+{{- if .Params.ogDescription }}{{ $ogDescription = .Params.ogDescription }}{{ end }}
+<title>{{ if .IsHome }}{{ .Site.Title }} — {{ .Site.Params.siteDescription }}{{ else }}{{ $pageTitle }}{{ end }}</title>
+{{- if $description }}
+<meta name="description" content="{{ $description }}">
+{{- end }}
+<link rel="canonical" href="{{ .Permalink }}">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ $ogTitle }}">
+{{- if $ogDescription }}
+<meta property="og:description" content="{{ $ogDescription }}">
+{{- end }}
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ "images/og/" | absURL }}{{ .File.ContentBaseName | default "lukra" }}.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="{{ "css/lukra.css" | absURL }}">
+</head>

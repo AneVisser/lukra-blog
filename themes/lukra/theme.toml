@@ -1,0 +1,4 @@
+name = "lukra"
+license = "unlicensed"
+description = "Bespoke theme for the Lukra blog"
+min_version = "0.100.0"

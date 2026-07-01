@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="lukra-root">
+  <header class="masthead">
+    <div class="inner">
+      <div class="logoslot">{{ partial "logo.html" . }}</div>
+      <p class="eyebrow">Lukra blog</p>
+      <h1>{{ .Title }}</h1>
+      <p class="stand">{{ .Site.Params.siteDescription }}</p>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <ul class="postlist">
+      {{ range .Pages.ByDate.Reverse }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{ with .Params.stand }}<small>{{ . }}</small>{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+{{ end }}

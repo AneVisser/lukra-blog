@@ -1,0 +1,19 @@
+baseURL = "https://lukra.co.nz/"
+languageCode = "en-nz"
+title = "Lukra"
+theme = "lukra"
+
+enableRobotsTXT = true
+
+[markup.goldmark.renderer]
+  # Required: posts contain raw HTML (<div class="note">, <details class="deep">,
+  # and the chart post's hand-authored SVG/table markup). Without this, Hugo
+  # strips those tags on render.
+  unsafe = true
+
+[params]
+  siteDescription = "Notes from under the hood — how Lukra models milk, energy and profit, and how we check it against the published science."
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
