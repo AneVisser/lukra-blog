@@ -12,7 +12,7 @@ enableRobotsTXT = true
   unsafe = true
 
 [params]
-  siteDescription = "Notes from under the hood — how Lukra models milk, energy and profit, and how we check it against the published science."
+  siteDescription = "Notes from under the bonnet — how Lukra models milk, energy and profit, and how we check it against the published science."
 
 [outputs]
   home = ["HTML", "RSS"]

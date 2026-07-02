@@ -40,7 +40,7 @@ None of this shows up if the only test is "are the cows full." It shows up the m
   A feed wedge is tactical: given where the farm is right now, it guides the day-to-day grazing call. Lukra is strategic: it sets where the farm should be heading across the season — and the target the wedge then works toward. Different layers of the same job, not rival answers to it.
 </div>
 
-## Real nutrition under the hood
+## Real nutrition under the bonnet
 
 A profit number is only as good as the biology behind it, so Lukra doesn't treat a cow as a tank that's either full or empty. It models how energy is actually spent.
 
