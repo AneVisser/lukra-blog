@@ -1,16 +1,16 @@
 ---
 title: Checking Lukra against the textbook
 eyebrow: Model validation
-stand: We re-derived the milk a cow should make from her feed using two independent industry standards — NRC 2001 and NASEM 2021 — and compared them to what Lukra predicts. Across nine New Zealand herds spanning three breeds and both parities, Lukra lands within a few percent of one of the two standards in every run.
+stand: We re-derived the milk a cow should make from her feed using two independent industry standards — NRC 2001 and NASEM 2021 — and compared them to what Lukra predicts. Across nine New Zealand scenarios spanning three breeds and both parities, Lukra lands within a few percent of one of the two standards in every run.
 date: 2026-06-08
 layout: chart
 scope: 9 runs · 3 breeds · parity 1 & 2
 benchmarks: NRC 2001 · NASEM 2021
 basis: energy (NEL) partitioning
 workbook: NRC2001_LukraValidationSpreadsheet_12.xlsx
-seoTitle: "Lukra Validated vs NRC 2001 & NASEM 2021 — 9 NZ Herds"
+seoTitle: "Lukra Validated vs NRC 2001 & NASEM 2021 — 9 NZ Scenarios"
 seoDescription: "How Lukra's milk predictions compare to NRC 2001 and NASEM 2021 across nine New Zealand dairy scenarios — within a few percent on every run."
-ogTitle: "Checking Lukra against the textbook — nine herds, two NRC standards."
+ogTitle: "Checking Lukra against the textbook — nine scenarios, two NRC standards."
 ---
 
   <!-- ================= HERO: NINE-RUN OVERVIEW ================= -->

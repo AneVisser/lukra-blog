@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  /* Local @font-face — points at the committed fonts/ folder next to this
+     template, not Google Fonts. This card is rendered offline (file:// URLs),
+     so it can't rely on the live site's network font import. */
+  @font-face { font-family: 'DM Sans'; src: url('fonts/DMSans-Bold.ttf'); font-weight: 700; }
+  @font-face { font-family: 'DM Sans'; src: url('fonts/DMSans-SemiBold.ttf'); font-weight: 600; }
+  @font-face { font-family: 'Inter'; src: url('fonts/Inter-Regular.ttf'); font-weight: 400; }
+  @font-face { font-family: 'Inter'; src: url('fonts/Inter-SemiBold.ttf'); font-weight: 600; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: #143219; /* --brand, matches the live masthead */
+    font-family: 'Inter', sans-serif;
+    position: relative;
+  }
+  .card {
+    width: 1200px; height: 630px;
+    padding: 64px 72px;
+    display: flex; flex-direction: column; justify-content: center;
+    border-bottom: 10px solid #4CAF50; /* --primary */
+  }
+  .logoslot { display: flex; align-items: center; margin-bottom: 36px; }
+  .logoslot svg { height: 62px; width: auto; display: block; }
+  .eyebrow {
+    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 22px;
+    letter-spacing: .14em; text-transform: uppercase; color: #C2A679; /* --brown */
+    margin-bottom: 22px;
+  }
+  h1 {
+    font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 56px;
+    line-height: 1.12; letter-spacing: -.02em; color: #ffffff;
+    margin-bottom: 26px;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .stand {
+    font-family: 'Inter', sans-serif; font-weight: 400; font-size: 26px;
+    line-height: 1.5; color: #d7e3da; max-width: 920px;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .domain {
+    position: absolute; bottom: 34px; right: 72px;
+    font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 20px;
+    letter-spacing: .04em; color: #9fb3a6;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="logoslot">__LOGO_SVG__</div>
+    <p class="eyebrow">__EYEBROW__</p>
+    <h1>__TITLE__</h1>
+    <p class="stand">__STAND__</p>
+  </div>
+  <div class="domain">lukra.co.nz/blog</div>
+</body>
+</html>
