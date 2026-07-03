@@ -5,7 +5,7 @@ stand: Lukra is a profit-maximising feed-budget planner for pasture-based dairy.
 date: 2026-06-01
 displayDate: June 2026
 seoTitle: "What Is Lukra? Profit-First Dairy Feed Budgeting"
-seoDescription: "Lukra is a whole-season feed-budget planner for pasture-based dairy that optimises your feeding plan for profit — not just 'enough feed.' See how it works."
+seoDescription: "Lukra is a whole-season feed-budget planner for pasture-based dairy farms that optimises your feeding plan for profit — not just 'enough feed.' See how it works."
 ogTitle: "What Lukra is — and why it plans for profit, not just enough feed"
 ---
 
