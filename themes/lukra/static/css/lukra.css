@@ -278,8 +278,11 @@ a{color:var(--header)}
    blog list and every post; the homepage's .masthead-home-photo keeps no
    modifier, so its full-bleed look is unaffected by these rules. */
 .page-photo-framed{display:flex;padding:28px;min-height:0}
-.page-card{background:#fff;border-radius:16px;flex:1 1 auto;overflow-y:auto;
-    box-shadow:0 10px 30px rgba(0,0,0,.25);min-height:0}
+.page-card{background:#fff;border-radius:16px;overflow-y:auto;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);min-height:0;
+    /* fixed panel width instead of letting .page-photo-framed's padding
+       determine it — same 1000px for both the list and single-post views */
+    flex:0 1 1000px;width:100%;max-width:1000px;margin:0 auto}
 .page-card .wrap{padding-top:32px} /* extra breathing room under the rounded
   top edge; .wrap's existing side/bottom padding is left as-is */
 
@@ -288,3 +291,10 @@ a{color:var(--header)}
    .page-card's overflow-y:auto never kicks in — the whole page scrolls
    instead of just the card. */
 .masthead-home-photo{min-height:0}
+
+/* .lukra-home was min-height:100vh, which let the flex column grow taller
+   than one screen when post content was long — that extra height leaked
+   onto the body itself, so the whole page (including the "fixed" photo)
+   scrolled instead of just .page-card. Locking it to height:100vh +
+   overflow:hidden forces all overflow into .page-card's own scrollbar. */
+.lukra-home{display:flex;flex-direction:column;height:100vh;overflow:hidden}
