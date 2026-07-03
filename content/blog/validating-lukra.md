@@ -11,6 +11,7 @@ workbook: NRC2001_LukraValidationSpreadsheet_12.xlsx
 seoTitle: "Lukra Validated vs NRC 2001 & NASEM 2021 — 9 NZ Scenarios"
 seoDescription: "How Lukra's milk predictions compare to NRC 2001 and NASEM 2021 across nine New Zealand dairy scenarios — within a few percent on every run."
 ogTitle: "Checking Lukra against the textbook — nine scenarios, two NRC standards."
+weight: 2   # "Checking Lukra against the textbook" — validation, shown second
 ---
 
   <!-- ================= HERO: NINE-RUN OVERVIEW ================= -->

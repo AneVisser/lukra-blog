@@ -10,7 +10,7 @@
         <div class="page-card">
             <div class="wrap">
                 <ul class="postlist">
-                    {{ range .Pages.ByDate.Reverse }}
+                    {{ range .Pages.ByWeight }}
                     <li>
                         <a href="{{ .Permalink }}">{{ .Title }}</a>
                         {{ with .Params.stand }}<small>{{ . }}</small>{{ end }}
