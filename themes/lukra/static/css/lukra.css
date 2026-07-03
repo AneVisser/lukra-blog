@@ -298,3 +298,9 @@ a{color:var(--header)}
    scrolled instead of just .page-card. Locking it to height:100vh +
    overflow:hidden forces all overflow into .page-card's own scrollbar. */
 .lukra-home{display:flex;flex-direction:column;height:100vh;overflow:hidden}
+
+/* ---- page-banner left column: logo + back button stacked, right-aligned
+   to each other. New — nothing existing did this two-item stacked-and-
+   aligned layout. Only used inside page-banner.html (list/single/chart),
+   not the homepage, so .masthead-home-top's own rule above is untouched. */
+.page-banner-leftcol{display:flex;flex-direction:column;align-items:flex-end;gap:16px}

@@ -1,35 +1,38 @@
-{{/* Shared fixed (non-scrolling) banner: large logo left, title/description
-    block right, optional right-aligned back button. Used by the blog list
-    and every blog post so all pages share one banner layout. Content is
-    passed in explicitly via a dict rather than read from .Params, since
-    front-matter shape differs between list/post/chart pages.
-    Expected keys (all optional except title):
-        title                - page <h1> text (required)
-        eyebrow              - small caps label above the title
-        stand                - subtitle / description paragraph
-        date                 - published-date string (blog posts)
-        scope, benchmarks, basis, workbook - chart-post meta fields
-        backHref, backLabel  - optional right-aligned nav button
-*/}}
-<header class="masthead masthead-home-band">
-    <div class="inner masthead-home-top">
-        <div class="logoslot logoslot-lg">{{ partial "logo.html" . }}</div>
-        <div class="masthead-home-text">
-            {{ with .eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
-            <h1>{{ .title }}</h1>
-            {{ with .stand }}<p class="stand">{{ . }}</p>{{ end }}
-            {{ if or .date .scope .benchmarks .basis .workbook }}
-            <div class="meta">
-                {{ with .date }}<span class="date">{{ . }}</span>{{ end }}
-                {{ with .scope }}<span><b>Scope</b> {{ . }}</span>{{ end }}
-                {{ with .benchmarks }}<span><b>Benchmarks</b> {{ . }}</span>{{ end }}
-                {{ with .basis }}<span><b>Basis</b> {{ . }}</span>{{ end }}
-                {{ with .workbook }}<span><b>Workbook</b> {{ . }}</span>{{ end }}
+{{/* Shared fixed (non-scrolling) banner: logo + back button stacked in a
+left column (right-aligned to each other), title/description block in
+a right column. Used by the blog list and every blog post so all pages
+share one banner layout. Content is passed in explicitly via a dict
+rather than read from .Params, since front-matter shape differs
+between list/post/chart pages.
+Expected keys (all optional except title):
+title                - page <h1> text (required)
+    eyebrow              - small caps label above the title
+    stand                - subtitle / description paragraph
+    date                 - published-date string (blog posts)
+    scope, benchmarks, basis, workbook - chart-post meta fields
+    backHref, backLabel  - optional back button, shown under the logo
+    */}}
+    <header class="masthead masthead-home-band">
+        <div class="inner masthead-home-top">
+            <div class="page-banner-leftcol">
+                <div class="logoslot">{{ partial "logo.html" . }}</div>
+                {{ with .backHref }}
+                <a class="btn primary page-banner-back" href="{{ . }}">{{ $.backLabel | default "← Back" }}</a>
+                {{ end }}
             </div>
-            {{ end }}
+            <div class="masthead-home-text">
+                {{ with .eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+                <h1>{{ .title }}</h1>
+                {{ with .stand }}<p class="stand">{{ . }}</p>{{ end }}
+                {{ if or .date .scope .benchmarks .basis .workbook }}
+                <div class="meta">
+                    {{ with .date }}<span class="date">{{ . }}</span>{{ end }}
+                    {{ with .scope }}<span><b>Scope</b> {{ . }}</span>{{ end }}
+                    {{ with .benchmarks }}<span><b>Benchmarks</b> {{ . }}</span>{{ end }}
+                    {{ with .basis }}<span><b>Basis</b> {{ . }}</span>{{ end }}
+                    {{ with .workbook }}<span><b>Workbook</b> {{ . }}</span>{{ end }}
+                </div>
+                {{ end }}
+            </div>
         </div>
-        {{ with .backHref }}
-        <a class="btn primary page-banner-back" href="{{ . }}">{{ $.backLabel | default "← Back" }}</a>
-        {{ end }}
-    </div>
-</header>
+    </header>
