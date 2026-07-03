@@ -267,3 +267,24 @@ a{color:var(--header)}
     background-size:cover;
     background-position:center;
 }
+
+/* ---- page-banner back button (list & post pages): pinned to the right
+   of the fixed banner via margin-left:auto in the existing flex row */
+.page-banner-back{margin-left:auto;white-space:nowrap}
+
+/* ---- page-photo-framed / page-card: layered on top of the existing
+   .masthead-home-photo (same fixed background as the homepage) to add a
+   padded, rounded, independently-scrollable content card. Used by the
+   blog list and every post; the homepage's .masthead-home-photo keeps no
+   modifier, so its full-bleed look is unaffected by these rules. */
+.page-photo-framed{display:flex;padding:28px;min-height:0}
+.page-card{background:#fff;border-radius:16px;flex:1 1 auto;overflow-y:auto;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);min-height:0}
+.page-card .wrap{padding-top:32px} /* extra breathing room under the rounded
+  top edge; .wrap's existing side/bottom padding is left as-is */
+
+/* min-height:0 above is a standard flexbox fix: without it, nested flex
+   items refuse to shrink below their content's natural height, and the
+   .page-card's overflow-y:auto never kicks in — the whole page scrolls
+   instead of just the card. */
+.masthead-home-photo{min-height:0}

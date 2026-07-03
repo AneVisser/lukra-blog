@@ -1,15 +1,22 @@
 {{ define "main" }}
-<div class="lukra-root">
-  <header class="masthead">
-    <div class="inner">
-      {{ partial "masthead-top.html" . }}
-      <div class="meta"><span class="date">{{ if .Params.displayDate }}{{ .Params.displayDate }}{{ else }}{{ .Date.Format "January 2006" }}{{ end }}</span></div>
+{{ $displayDate := .Date.Format "January 2006" }}
+{{ with .Params.displayDate }}{{ $displayDate = . }}{{ end }}
+<div class="lukra-root lukra-home">
+    {{ partial "page-banner.html" (dict
+    "title" .Title
+    "eyebrow" .Params.eyebrow
+    "stand" .Params.stand
+    "date" $displayDate
+    "backHref" "/blog/"
+    "backLabel" "← All posts"
+    ) }}
+    <div class="masthead-home-photo page-photo-framed">
+        <div class="page-card">
+            <div class="wrap">
+                <article class="post-body">{{ .Content }}</article>
+                {{ partial "post-footer.html" . }}
+            </div>
+        </div>
     </div>
-  </header>
-
-  <div class="wrap">
-    <article class="post-body">{{ .Content }}</article>
-    {{ partial "post-footer.html" . }}
-  </div>
 </div>
 {{ end }}
