@@ -26,7 +26,7 @@ body{margin:0}
 
 /* ---- masthead band ---- */
 .masthead{background:var(--brand);color:#fff;margin:0 0 0;padding:30px 24px 36px;
-           border-bottom:4px solid var(--primary)}
+    border-bottom:4px solid var(--primary)}
 .masthead .inner{max-width:812px;margin:0 auto}
 .logoslot{height:30px;display:flex;align-items:center;margin-bottom:20px}
 .logoslot svg{height:48px;width:auto;display:block}
@@ -245,9 +245,10 @@ a{color:var(--header)}
 /* ---- homepage masthead band: same green as .masthead, horizontal
    logo+text layout instead of the stacked eyebrow/h1/stand used on posts */
 .masthead-home-band{flex:0 0 auto} /* natural height, banner never stretches */
-.masthead-home-band .inner{max-width:1040px} /* wider than the default 812px
-   .masthead .inner — pulls the logo further left and gives .masthead-home-text
-   more room to breathe, so it wraps to fewer lines and the buttons sit higher */
+.masthead-home-band .inner{max-width:min(94vw, 2000px)} /* was fixed at 1040px —
+  now scales fluidly with viewport width, capped at 2000px (2x the 1000px
+  .page-card content width used on list/single pages). Applies to both the
+  homepage and blog banners, since both share .masthead-home-band. */
 .masthead-home-top{
     display:flex;
     align-items:center;
@@ -257,6 +258,9 @@ a{color:var(--header)}
 .logoslot-lg{height:76px} /* was 60px (2x base) — bumped again for more presence */
 .logoslot-lg svg{height:130px;width:auto} /* was 96px (2x base) — bumped to match */
 .masthead-home-text{flex:1;min-width:260px}
+.masthead-home-text .stand{margin-bottom:20px;max-width:100ch} /* overrides the
+  base .stand{max-width:64ch} for this wider banner context — 100ch keeps the
+  description readable on ultra-wide screens instead of stretching edge-to-edge */
 .masthead-home-text .stand{margin-bottom:20px}
 
 /* ---- homepage photo band: fills whatever height the banner didn't use,

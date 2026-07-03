@@ -144,7 +144,6 @@ ogTitle: "Checking Lukra against the textbook — nine scenarios, two NRC standa
       her genetically maximum production at any stage of lactation. So the standard (NRC) is best
       read as an <em>uncapped energy-to-milk conversion</em> — useful precisely because any gap
       against it is informative.</p>
-
     <h3>Lukra carries the biology the conversion leaves out</h3>
     <p>Lukra starts from a <strong>lactation curve</strong> that sets each cow's milk
       <em>potential</em> for the month. Energy is turned into milk up to that potential — and any
@@ -154,7 +153,6 @@ ogTitle: "Checking Lukra against the textbook — nine scenarios, two NRC standa
       season-long margin. It's the same most-limiting-nutrient logic NRC uses for the essentials,
       with one honest addition — a real cow can say "no more milk this month" and put the rest on
       her back.</p>
-
     <div class="note warm">
       <span class="lbl">Context — the redesign this validates</span>
       An earlier version of Lukra read the Hulme cost as a rising price on milk itself and, as a
@@ -243,7 +241,6 @@ ogTitle: "Checking Lukra against the textbook — nine scenarios, two NRC standa
     <p>This is the result that matters most, and it's quietly remarkable: Lukra uses a maintenance
       cost (Agnew–Yan) that is <em>neither</em> NRC value, yet it lands between the two editions and
       hugs the line through the months that actually make the milk. The energy accounting is sound.</p>
-
     <details class="deep">
       <summary>Go deeper: why NASEM&nbsp;2021 is the tougher benchmark <span class="tag">for beta-testers</span></summary>
       <div class="body">
@@ -513,7 +510,6 @@ ogTitle: "Checking Lukra against the textbook — nine scenarios, two NRC standa
       energy of gain <em>itself</em>, from her weight trajectory, without importing Lukra's figure —
       and the two agree to within about 3&nbsp;%. So frame growth checks out independently; the milk
       difference comes from elsewhere, and we can decompose exactly where.</p>
-
     <details class="deep">
       <summary>Go deeper: the term-by-term energy audit <span class="tag">for beta-testers</span></summary>
       <div class="body">
