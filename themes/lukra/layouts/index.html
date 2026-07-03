@@ -1,13 +1,20 @@
 {{ define "main" }}
-<div class="lukra-root">
-  <header class="masthead">
-    <div class="inner">
-      {{ partial "masthead-top.html" . }}
-      <div class="home-links">
-        <a class="btn primary" href="/blog/">Read the blog</a>
-        <a class="btn" href="https://app.lukra.co.nz">Open the app</a>
-      </div>
-    </div>
-  </header>
+<div class="lukra-root lukra-home">
+    <header class="masthead masthead-home-band">
+        <div class="inner masthead-home-top">
+            <div class="logoslot logoslot-lg">{{ partial "logo.html" . }}</div>
+            <div class="masthead-home-text">
+                {{/* h1 kept for SEO/accessibility (logo SVG wordmark isn't real
+                text) but visually hidden — sr-only, not rendered on screen */}}
+                <h1 class="sr-only">{{ .Title }}</h1>
+                <p class="stand">{{ .Params.stand }}</p>
+                <div class="home-links">
+                    <a class="btn primary" href="/blog/">Read the blog</a>
+                    <a class="btn primary" href="https://app.lukra.co.nz">Open the app</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="masthead-home-photo"></div>
 </div>
 {{ end }}

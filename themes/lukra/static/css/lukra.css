@@ -52,11 +52,17 @@ h1{font-family:var(--display);font-weight:700;font-size:clamp(28px,5vw,42px);lin
 /* ---- home landing CTAs (placeholder home page) ---- */
 .home-links{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
 .btn{display:inline-block;font-family:var(--body);font-weight:600;font-size:14px;
-     padding:11px 20px;border-radius:8px;text-decoration:none;letter-spacing:.01em}
+    padding:11px 20px;border-radius:8px;text-decoration:none;letter-spacing:.01em}
 .btn.primary{background:var(--primary);color:#fff}
 .btn.primary:hover{background:#43a047}
 .btn:not(.primary){background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
 .btn:not(.primary):hover{border-color:#fff}
+/* .btn.secondary — solid brown fill, for CTAs that shouldn't read as lower-
+   priority than .primary (e.g. "Open the app"). Left .btn:not(.primary)
+   above untouched since it may still be used for genuinely secondary
+   actions elsewhere (e.g. a future post-footer CTA). */
+.btn.secondary{background:var(--brown);color:var(--brand);border:none}
+.btn.secondary:hover{background:#b3966a}
 
 /* ---- hero panel ---- */
 .hero{background:var(--mist);border:1px solid var(--rule);border-radius:12px;
@@ -226,3 +232,38 @@ a{color:var(--header)}
      text-decoration:none;letter-spacing:-.01em}
 .postlist a:hover{color:var(--header)}
 .postlist small{display:block;color:var(--gray);font-size:13.5px;margin-top:6px;line-height:1.5}
+
+/* ---- sr-only utility (visually hidden, still in a11y tree) ---- */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+    overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ---- homepage: flex column filling the viewport exactly (no scroll) ----
+   Scoped to .lukra-home (added alongside .lukra-root only on index.html)
+   so blog/post pages, which keep plain .lukra-root, are unaffected. */
+.lukra-home{display:flex;flex-direction:column;min-height:100vh}
+
+/* ---- homepage masthead band: same green as .masthead, horizontal
+   logo+text layout instead of the stacked eyebrow/h1/stand used on posts */
+.masthead-home-band{flex:0 0 auto} /* natural height, banner never stretches */
+.masthead-home-band .inner{max-width:1040px} /* wider than the default 812px
+   .masthead .inner — pulls the logo further left and gives .masthead-home-text
+   more room to breathe, so it wraps to fewer lines and the buttons sit higher */
+.masthead-home-top{
+    display:flex;
+    align-items:center;
+    gap:32px;
+    flex-wrap:wrap;
+}
+.logoslot-lg{height:76px} /* was 60px (2x base) — bumped again for more presence */
+.logoslot-lg svg{height:130px;width:auto} /* was 96px (2x base) — bumped to match */
+.masthead-home-text{flex:1;min-width:260px}
+.masthead-home-text .stand{margin-bottom:20px}
+
+/* ---- homepage photo band: fills whatever height the banner didn't use,
+   so banner + photo always sum to exactly one viewport, no scrollbar */
+.masthead-home-photo{
+    flex:1 1 auto;
+    background-image:url("/images/dairy-background.png");
+    background-size:cover;
+    background-position:center;
+}
