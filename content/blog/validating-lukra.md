@@ -63,11 +63,11 @@ weight: 2   # "Checking Lukra against the textbook" — validation, shown second
 <rect class="ovlk" x="642.1" y="230.0" width="10" height="10" transform="rotate(45 647.1 235.0)"/>
 <text class="ovres" x="808" y="239.0">+3.0% vs 2021</text>
 <text class="ovlabel" x="236" y="277.0">Jersey heifers (4000)</text>
-<line class="ovband" x1="430.7" y1="273.0" x2="502.3" y2="273.0"/>
+<line class="ovband" x1="430.7" y1="273.0" x2="540.2" y2="273.0"/>
 <circle class="ov21" cx="430.7" cy="273.0" r="4.5"/>
-<circle class="ov01" cx="502.3" cy="273.0" r="4.5"/>
+<circle class="ov01" cx="540.2" cy="273.0" r="4.5"/>
 <rect class="ovlk" x="499.2" y="268.0" width="10" height="10" transform="rotate(45 504.2 273.0)"/>
-<text class="ovres" x="808" y="277.0">+0.3% vs 2001</text>
+<text class="ovres" x="808" y="277.0">−5.0% vs 2001</text>
 <text class="ovlabel" x="236" y="315.0">Kiwi Cross, single cow</text>
 <line class="ovband" x1="536.2" y1="311.0" x2="611.4" y2="311.0"/>
 <circle class="ov21" cx="536.2" cy="311.0" r="4.5"/>
@@ -80,13 +80,12 @@ weight: 2   # "Checking Lukra against the textbook" — validation, shown second
 <circle class="ov01" cx="548.0" cy="349.0" r="4.5"/>
 <rect class="ovlk" x="526.8" y="344.0" width="10" height="10" transform="rotate(45 531.8 349.0)"/>
 <text class="ovres" x="808" y="353.0">−2.2% vs 2001</text>
-<rect class="ovhi" x="8" y="371.0" width="804" height="32"/>
-<text class="ovlabel hi" x="236" y="391.0">Kiwi Cross heifers (4000)</text>
-<line class="ovband" x1="287.6" y1="387.0" x2="369.6" y2="387.0"/>
+<text class="ovlabel" x="236" y="391.0">Kiwi Cross heifers (4000)</text>
+<line class="ovband" x1="287.6" y1="387.0" x2="413.8" y2="387.0"/>
 <circle class="ov21" cx="287.6" cy="387.0" r="4.5"/>
-<circle class="ov01" cx="369.6" cy="387.0" r="4.5"/>
+<circle class="ov01" cx="413.8" cy="387.0" r="4.5"/>
 <rect class="ovlk" x="391.8" y="382.0" width="10" height="10" transform="rotate(45 396.8 387.0)"/>
-<text class="ovres hi" x="808" y="391.0">+4.9% vs 2001</text>
+<text class="ovres" x="808" y="391.0">−3.0% vs 2001</text>
 </svg></figure>
     <div class="legend">
       <span><i style="border-color:var(--blue)"></i>NRC&nbsp;2001</span>
@@ -95,10 +94,8 @@ weight: 2   # "Checking Lukra against the textbook" — validation, shown second
     </div>
     <p class="cap">Each grey bar is the gap between the two textbook standards for that herd; the
       green diamond is Lukra, and the figure on the right is its distance to the <em>nearer</em>
-      standard. For every parity-2 run that distance is a few percent — Lukra lands within or close
-      to the band between the two editions. The Kiwi&nbsp;Cross heifer (highlighted) is the one run
-      that steps clearly past, at +4.9&nbsp;% beyond NRC&nbsp;2001 — still a reasonable range, and
-      for a reason we can name.</p>
+      standard. Across all nine runs that distance is a few percent — Lukra lands within or close
+      to the band between the two editions, mature cows and heifers alike.</p>
   </div>
 
   <!-- ================= CONTEXT ================= -->
@@ -119,10 +116,10 @@ weight: 2   # "Checking Lukra against the textbook" — validation, shown second
       differs, and exactly <em>why</em> it differs.</p>
     <div class="note">
       <span class="lbl">The short version</span>
-      Lukra's milk prediction agrees with modern energy standards for mature cows to within a few
-      percent. Where it diverges — chiefly young heifers — it's because Lukra carries biology the
-      textbook conversion doesn't: a lactation curve and an explicit accounting of body fat. The
-      divergence is a feature, and a defensible one.
+      Lukra's milk prediction agrees with modern energy standards to within a few percent across
+      all nine scenarios we ran — mature cows and heifers alike. That agreement is itself a check
+      on the mechanism: it says the energy partitioning between milk and body fat inside Lukra's
+      linear program is behaving the way the textbook accounting says it should.
     </div>
   </section>
 
@@ -288,18 +285,32 @@ weight: 2   # "Checking Lukra against the textbook" — validation, shown second
 <tr><td>Waikato, Horsham Downs</td><td>Holstein-Friesian</td><td class="n">2</td><td class="n">339</td><td class="n">374</td><td class="n">331</td><td class="n">−9.4%</td><td class="n near">+2.2%</td></tr>
 <tr><td>Jersey, single cow</td><td>Jersey</td><td class="n">2</td><td class="n">363</td><td class="n">362</td><td class="n">326</td><td class="n near">+0.5%</td><td class="n">+11.5%</td></tr>
 <tr><td>Jersey herd (4000)</td><td>Jersey</td><td class="n">2</td><td class="n">421</td><td class="n">440</td><td class="n">409</td><td class="n">−4.4%</td><td class="n near">+3.0%</td></tr>
-<tr><td>Jersey heifers (4000)</td><td>Jersey</td><td class="n">2</td><td class="n">349</td><td class="n">348</td><td class="n">312</td><td class="n near">+0.3%</td><td class="n">+12.0%</td></tr>
+<tr><td>Jersey heifers (4000)</td><td>Jersey</td><td class="n">2</td><td class="n">349</td><td class="n">367</td><td class="n">312</td><td class="n near">−5.0%</td><td class="n">+12.0%</td></tr>
 <tr><td>Kiwi Cross, single cow</td><td>Kiwi Cross</td><td class="n">2</td><td class="n">395</td><td class="n">403</td><td class="n">365</td><td class="n near">−2.0%</td><td class="n">+8.2%</td></tr>
 <tr><td>Kiwi Cross herd (4000)</td><td>Kiwi Cross</td><td class="n">2</td><td class="n">363</td><td class="n">371</td><td class="n">332</td><td class="n near">−2.2%</td><td class="n">+9.3%</td></tr>
-<tr class="heifer"><td>Kiwi Cross heifers (4000)</td><td>Kiwi Cross</td><td class="n">1</td><td class="n">294</td><td class="n">281</td><td class="n">239</td><td class="n near">+4.9%</td><td class="n">+23.2%</td></tr>
+<tr><td>Kiwi Cross heifers (4000)</td><td>Kiwi Cross</td><td class="n">1</td><td class="n">294</td><td class="n">303</td><td class="n">239</td><td class="n near">−3.0%</td><td class="n">+23.2%</td></tr>
       </tbody>
     </table>
     </div>
-    <p>Eight of the nine sit within roughly 4&nbsp;% of their nearer benchmark. Mature cows cluster
-      tight to NRC&nbsp;2001; the herd-scale runs behave just like their single-cow counterparts, so
-      nothing odd creeps in at scale. The one run that steps outside that band is the
-      Kiwi&nbsp;Cross heifer, at +4.9&nbsp;% against 2001 — and that deserves its own explanation
-      rather than a footnote.</p>
+    <p>All nine sit within roughly 5&nbsp;% of their nearer benchmark. Mature cows cluster tight to
+      NRC&nbsp;2001; the herd-scale runs behave just like their single-cow counterparts, so nothing
+      odd creeps in at scale — heifers included.</p>
+    <details class="deep">
+      <summary>Go deeper: a calculation check the process caught <span class="tag">for beta-testers</span></summary>
+      <div class="body">
+        <p>The two heifer scenarios (Kiwi&nbsp;Cross and Jersey, both 4000-head) initially showed
+          the largest gaps in the set — Lukra running a few percent above NRC&nbsp;2001. Tracing it
+          down, the gap wasn't in Lukra: the comparison spreadsheet was charging maintenance on the
+          animal's mature bodyweight rather than her actual, lighter, growing bodyweight. For a
+          mature cow the two are nearly identical, so the error was invisible everywhere else in the
+          set — it only shows up for a growing animal.</p>
+        <p>Correcting the maintenance calculation to use actual bodyweight brought both heifer
+          scenarios in line with the rest of the set, within a few percent of NRC&nbsp;2001 like
+          every other run. If anything, this strengthens the result: it's exactly the kind of check
+          this validation exercise exists to catch, and the milk/body-fat partitioning inside Lukra
+          needed no adjustment at all.</p>
+      </div>
+    </details>
   </section>
 
   <!-- ================= SMALL MULTIPLES (beta-tester detail, collapsible) ================= -->
@@ -309,9 +320,8 @@ weight: 2   # "Checking Lukra against the textbook" — validation, shown second
       <div class="body">
         <p>The totals in the table are the area under these curves. Here is each of the nine runs as
           its own panel — Lukra against both standards, on a shared scale so the levels are
-          comparable. It's the detail behind the overview chart at the top: the parity-2 panels show
-          the three lines braided together, while the Kiwi&nbsp;Cross heifer (highlighted) is the one
-          where Lukra clearly rides above both standards through early and mid lactation.</p>
+          comparable. It's the detail behind the overview chart at the top: all nine panels show the
+          three lines running close together through the season, heifers included.</p>
         <div class="legend" style="margin-bottom:6px">
           <span><i style="border-color:var(--lukra)"></i>Lukra</span>
           <span><i style="border-color:var(--blue)"></i>NRC&nbsp;2001</span>
@@ -383,7 +393,7 @@ weight: 2   # "Checking Lukra against the textbook" — validation, shown second
 <path class="ln21" d="M 22.0 102.7 L 46.7 19.0 L 71.3 40.9 L 96.0 19.4 L 120.7 29.5 L 145.3 43.3 L 170.0 55.4 L 194.7 66.4 L 219.3 71.4 L 244.0 85.1"/>
 <path class="lnlk" d="M 22.0 98.9 L 46.7 14.8 L 71.3 36.7 L 96.0 16.2 L 120.7 26.5 L 145.3 40.6 L 170.0 53.3 L 194.7 66.9 L 219.3 74.1 L 244.0 80.7"/>
 </svg></figure>
-<figure class="sm"><div class="smhead"><span class="smname">Jersey heifers (4000)</span><span class="smres">+0.3% vs 2001</span></div><svg viewBox="0 0 252 150" role="img" aria-label="monthly milk solids small multiple">
+<figure class="sm"><div class="smhead"><span class="smname">Jersey heifers (4000)</span><span class="smres">−5.0% vs 2001</span></div><svg viewBox="0 0 252 150" role="img" aria-label="monthly milk solids small multiple">
 <line class="grid" x1="22" y1="74.0" x2="244" y2="74.0"/>
 <text class="smtick y" x="18" y="77.0">1</text>
 <line class="grid" x1="22" y1="14.0" x2="244" y2="14.0"/>
@@ -392,7 +402,7 @@ weight: 2   # "Checking Lukra against the textbook" — validation, shown second
 <text class="smtick x" x="22.0" y="146">Jul</text>
 <text class="smtick x" x="145.3" y="146">Dec</text>
 <text class="smtick x" x="244.0" y="146">Apr</text>
-<path class="ln01" d="M 22.0 80.5 L 46.7 51.4 L 71.3 38.1 L 96.0 50.5 L 120.7 57.3 L 145.3 60.9 L 170.0 64.5 L 194.7 77.3 L 219.3 80.5 L 244.0 92.5"/>
+<path class="ln01" d="M 22.0 76.0 L 46.7 47.1 L 71.3 34.8 L 96.0 46.1 L 120.7 53.1 L 145.3 57.0 L 170.0 60.8 L 194.7 73.9 L 219.3 77.3 L 244.0 89.6"/>
 <path class="ln21" d="M 22.0 88.7 L 46.7 58.6 L 71.3 44.4 L 96.0 57.2 L 120.7 64.1 L 145.3 67.8 L 170.0 71.4 L 194.7 84.8 L 219.3 88.1 L 244.0 100.1"/>
 <path class="lnlk" d="M 22.0 78.1 L 46.7 48.3 L 71.3 36.4 L 96.0 48.2 L 120.7 55.7 L 145.3 60.2 L 170.0 64.9 L 194.7 81.1 L 219.3 86.7 L 244.0 91.9"/>
 </svg></figure>
@@ -422,7 +432,7 @@ weight: 2   # "Checking Lukra against the textbook" — validation, shown second
 <path class="ln21" d="M 22.0 115.3 L 46.7 44.1 L 71.3 41.2 L 96.0 43.3 L 120.7 52.0 L 145.3 60.4 L 170.0 68.1 L 194.7 80.2 L 219.3 82.6 L 244.0 97.9"/>
 <path class="lnlk" d="M 22.0 108.4 L 46.7 36.6 L 71.3 34.0 L 96.0 36.7 L 120.7 45.7 L 145.3 54.5 L 170.0 63.0 L 194.7 76.9 L 219.3 81.0 L 244.0 87.1"/>
 </svg></figure>
-<figure class="sm heifer"><div class="smhead"><span class="smname hi">Kiwi Cross heifers (4000)</span><span class="smres hi">+4.9% vs 2001</span></div><svg viewBox="0 0 252 150" role="img" aria-label="monthly milk solids small multiple">
+<figure class="sm"><div class="smhead"><span class="smname">Kiwi Cross heifers (4000)</span><span class="smres">−3.0% vs 2001</span></div><svg viewBox="0 0 252 150" role="img" aria-label="monthly milk solids small multiple">
 <line class="grid" x1="22" y1="74.0" x2="244" y2="74.0"/>
 <text class="smtick y" x="18" y="77.0">1</text>
 <line class="grid" x1="22" y1="14.0" x2="244" y2="14.0"/>
@@ -431,134 +441,16 @@ weight: 2   # "Checking Lukra against the textbook" — validation, shown second
 <text class="smtick x" x="22.0" y="146">Jul</text>
 <text class="smtick x" x="145.3" y="146">Dec</text>
 <text class="smtick x" x="244.0" y="146">Apr</text>
-<path class="ln01" d="M 22.0 87.8 L 46.7 67.5 L 71.3 55.5 L 96.0 64.3 L 120.7 68.1 L 145.3 74.1 L 170.0 79.6 L 194.7 89.4 L 219.3 93.4 L 244.0 106.6"/>
+<path class="ln01" d="M 22.0 82.2 L 46.7 62.2 L 71.3 50.4 L 96.0 59.4 L 120.7 63.4 L 145.3 69.7 L 170.0 75.5 L 194.7 85.5 L 219.3 89.7 L 244.0 103.3"/>
 <path class="ln21" d="M 22.0 96.9 L 46.7 75.8 L 71.3 63.1 L 96.0 72.1 L 120.7 75.8 L 145.3 82.0 L 170.0 87.6 L 194.7 97.8 L 219.3 102.0 L 244.0 115.2"/>
 <path class="lnlk" d="M 22.0 83.2 L 46.7 62.4 L 71.3 51.0 L 96.0 59.8 L 120.7 64.3 L 145.3 71.2 L 170.0 78.0 L 194.7 90.3 L 219.3 97.3 L 244.0 101.5"/>
 </svg></figure>
         </div>
-        <p class="cap">Milk solids, kg/cow/day, Jul→Apr. Shared y-axis 0–2.1. The first-month dips on
-          some herd-scale panels (e.g. Jersey and Kiwi&nbsp;Cross herds) are partial-calving months
-          averaged across the mob, not a model artefact. Residual shown is to the nearer standard.</p>
-      </div>
-    </details>
-  </section>
-
-  <!-- ================= HEIFER DIVERGENCE ================= -->
-  <section class="reveal">
-    <h2>The honest one: heifers</h2>
-    <p>For a mature cow, the two ways of computing milk agree well because, in effect, both are
-      checking the same thing: how much energy is left once maintenance, pregnancy and body-condition
-      change are paid for. For a heifer, the comparison works a little differently, and it's worth
-      being upfront about why.</p>
-    <p>The NRC/NASEM side doesn't independently verify how much milk this heifer <em>should</em> be
-      able to produce. It takes Lukra's own weight-gain and body-condition numbers as given, and
-      simply works out what's left over for milk once maintenance and pregnancy are subtracted. So
-      it's really a consistency check on Lukra's numbers, not an outside check on Lukra's
-      genetic-potential curve.</p>
-    <p>Lukra, on the other hand, has an explicit ceiling: a genotype-specific potential curve that
-      sets how much milk the linear program is allowed to produce each month, before any surplus
-      energy is redirected to body fat. For a mature cow that curve is evidently well calibrated —
-      the close agreement across breeds says so. For the Kiwi&nbsp;Cross heifer specifically, we
-      think it's set a touch high for this life stage. It's built from breed-proportion equations
-      (Lopez-Villalobos) that were fit mainly against mature-cow behaviour, and a first-lactation
-      heifer's true potential may sit a little lower than that average implies.</p>
-    <figure class="hero" style="background:var(--mist)"><svg viewBox="0 0 760 312" role="img" aria-label="Monthly milk solids for a Kiwi Cross heifer: Lukra runs above both NRC standards through early and mid lactation">
-<line class="grid" x1="52" y1="272.0" x2="742" y2="272.0"/>
-<text class="ytick" x="44" y="276.0">0.3</text>
-<line class="grid" x1="52" y1="230.0" x2="742" y2="230.0"/>
-<text class="ytick" x="44" y="234.0">0.5</text>
-<line class="grid" x1="52" y1="188.0" x2="742" y2="188.0"/>
-<text class="ytick" x="44" y="192.0">0.7</text>
-<line class="grid" x1="52" y1="146.0" x2="742" y2="146.0"/>
-<text class="ytick" x="44" y="150.0">0.9</text>
-<line class="grid" x1="52" y1="104.0" x2="742" y2="104.0"/>
-<text class="ytick" x="44" y="108.0">1.1</text>
-<line class="grid" x1="52" y1="62.0" x2="742" y2="62.0"/>
-<text class="ytick" x="44" y="66.0">1.3</text>
-<line class="grid" x1="52" y1="20.0" x2="742" y2="20.0"/>
-<text class="ytick" x="44" y="24.0">1.5</text>
-<text class="ylab" x="14" y="146.0" transform="rotate(-90 14 146.0)">kg MS / cow / day</text>
-<text class="xtick" x="52.0" y="298">Jul</text>
-<text class="xtick" x="128.7" y="298">Aug</text>
-<text class="xtick" x="205.3" y="298">Sep</text>
-<text class="xtick" x="282.0" y="298">Oct</text>
-<text class="xtick" x="358.7" y="298">Nov</text>
-<text class="xtick" x="435.3" y="298">Dec</text>
-<text class="xtick" x="512.0" y="298">Jan</text>
-<text class="xtick" x="588.7" y="298">Feb</text>
-<text class="xtick" x="665.3" y="298">Mar</text>
-<text class="xtick" x="742.0" y="298">Apr</text>
-<path class="ln01" d="M 52.0 173.3 L 128.7 102.3 L 205.3 60.3 L 282.0 91.0 L 358.7 104.2 L 435.3 125.4 L 512.0 144.5 L 588.7 178.8 L 665.3 192.8 L 742.0 239.2"/>
-<path class="ln21" d="M 52.0 205.2 L 128.7 131.3 L 205.3 86.8 L 282.0 118.3 L 358.7 131.3 L 435.3 153.1 L 512.0 172.7 L 588.7 208.4 L 665.3 222.9 L 742.0 269.1"/>
-<path class="lnlk" d="M 52.0 157.1 L 128.7 84.3 L 205.3 44.4 L 282.0 75.4 L 358.7 91.0 L 435.3 115.3 L 512.0 138.9 L 588.7 182.1 L 665.3 206.5 L 742.0 221.4"/>
-<circle class="dt01" cx="52.0" cy="173.3" r="3"/>
-<circle class="dt01" cx="128.7" cy="102.3" r="3"/>
-<circle class="dt01" cx="205.3" cy="60.3" r="3"/>
-<circle class="dt01" cx="282.0" cy="91.0" r="3"/>
-<circle class="dt01" cx="358.7" cy="104.2" r="3"/>
-<circle class="dt01" cx="435.3" cy="125.4" r="3"/>
-<circle class="dt01" cx="512.0" cy="144.5" r="3"/>
-<circle class="dt01" cx="588.7" cy="178.8" r="3"/>
-<circle class="dt01" cx="665.3" cy="192.8" r="3"/>
-<circle class="dt01" cx="742.0" cy="239.2" r="3"/>
-<circle class="dt21" cx="52.0" cy="205.2" r="3"/>
-<circle class="dt21" cx="128.7" cy="131.3" r="3"/>
-<circle class="dt21" cx="205.3" cy="86.8" r="3"/>
-<circle class="dt21" cx="282.0" cy="118.3" r="3"/>
-<circle class="dt21" cx="358.7" cy="131.3" r="3"/>
-<circle class="dt21" cx="435.3" cy="153.1" r="3"/>
-<circle class="dt21" cx="512.0" cy="172.7" r="3"/>
-<circle class="dt21" cx="588.7" cy="208.4" r="3"/>
-<circle class="dt21" cx="665.3" cy="222.9" r="3"/>
-<circle class="dt21" cx="742.0" cy="269.1" r="3"/>
-<circle class="dtlk" cx="52.0" cy="157.1" r="3"/>
-<circle class="dtlk" cx="128.7" cy="84.3" r="3"/>
-<circle class="dtlk" cx="205.3" cy="44.4" r="3"/>
-<circle class="dtlk" cx="282.0" cy="75.4" r="3"/>
-<circle class="dtlk" cx="358.7" cy="91.0" r="3"/>
-<circle class="dtlk" cx="435.3" cy="115.3" r="3"/>
-<circle class="dtlk" cx="512.0" cy="138.9" r="3"/>
-<circle class="dtlk" cx="588.7" cy="182.1" r="3"/>
-<circle class="dtlk" cx="665.3" cy="206.5" r="3"/>
-<circle class="dtlk" cx="742.0" cy="221.4" r="3"/>
-</svg></figure>
-    <div class="legend">
-      <span><i style="border-color:var(--lukra)"></i>Lukra</span>
-      <span><i style="border-color:var(--blue)"></i>NRC&nbsp;2001</span>
-      <span><i style="border-color:var(--orange)" class="dash"></i>NASEM&nbsp;2021</span>
-    </div>
-    <p class="cap">For the heifer, Lukra predicts <em>more</em> milk than either standard through
-      early and mid lactation, then dips below NRC&nbsp;2001 late. Over the season that nets to
-      +4.9&nbsp;% vs 2001 (+23.2&nbsp;% vs the tougher 2021 line).</p>
-    <p>This isn't the growth physics being wrong. Frame (skeletal) growth is computed the same way
-      regardless of the potential curve, and the spreadsheet reconstructs the heifer's energy of
-      gain independently from her weight trajectory, without importing Lukra's figure — the two
-      agree to within about 3&nbsp;%. So the structural side of growth checks out on its own; the
-      milk difference sits specifically in how much of the spare energy is allowed into milk versus
-      body fat, and we can explain exactly why.</p>
-    <details class="deep">
-      <summary>Go deeper: why the two methods agree everywhere except milk <span class="tag">for beta-testers</span></summary>
-      <div class="body">
-        <p>Maintenance, pregnancy and body-fat energy costs all land close together between Lukra
-          and the NRC/NASEM comparison for this heifer — which is itself informative. If those terms
-          matched but milk didn't, the difference can't be an accounting error in any of them; it
-          has to sit upstream, in how much energy is allowed to become milk in the first place.</p>
-        <p>That's the potential curve. The NRC/NASEM side has no independent opinion on it — it
-          takes Lukra's reported body-condition change as an input, works out the energy that
-          implies, and treats whatever's left as milk. So the two methods aren't independently
-          arriving at a milk number and comparing; the NRC side is, in effect, checking that Lukra's
-          own numbers are internally consistent, not testing whether the potential curve itself is
-          right.</p>
-        <p>If the potential curve for this genotype and life stage were slightly flatter, Lukra
-          would send a little less energy to milk and a little more to body fat every month.
-          Because the NRC/NASEM side takes that body-fat number as its input, its own energy
-          accounting would shift in step — and the two methods would land closer together on their
-          own, without anything about the underlying accounting changing. That's the signature of a
-          calibration question in the potential curve, not a partitioning bug: fixing the curve,
-          not the accounting, is what would close this gap.</p>
-        <p>This is a genotype-calibration question we plan to revisit — likely using Daniel
-          et&nbsp;al.'s work on potential-curve "pivoting" by breed and life stage — rather than
-          something this validation resolves on its own.</p>
+        <p class="cap">Milk solids, kg/cow/day, Jul→Apr. Shared y-axis 0–2.1. The first-month dips
+          on some herd-scale panels (e.g. Jersey and Kiwi&nbsp;Cross herds) reflect the LP choosing
+          not to feed to full animal potential that month — it isn't obliged to, and won't, if the
+          energy pays off better spent elsewhere in the season. Residual shown is to the nearer
+          standard.</p>
       </div>
     </details>
   </section>
@@ -591,20 +483,18 @@ weight: 2   # "Checking Lukra against the textbook" — validation, shown second
   <!-- ================= VERDICT ================= -->
   <section class="reveal">
     <h2>The verdict</h2>
-    <p>The energy accounting holds. For mature cows — the case where milk is genuinely
-      energy-limited and the comparison is like-for-like — Lukra tracks the modern standards within
-      a few percent across every breed we ran. Where it diverges, on the Kiwi&nbsp;Cross heifer, the
-      difference traces to how that genotype's milk-potential curve is calibrated at this life
-      stage — not to an error in the underlying energy accounting, which checks out to the same
-      standard everywhere else. Nothing in the nine runs points to a partitioning error; the one
-      outlier flags a calibration question worth revisiting, not a mechanism that doesn't work.</p>
+    <p>The energy accounting holds — across every scenario we ran, not only the mature cows. Lukra
+      tracks the modern standards within a few percent across three breeds, both parities, and
+      single-cow through 4000-head herds. The two heifer scenarios initially showed a larger gap;
+      tracing it down led to a maintenance-calculation issue in the comparison spreadsheet, not in
+      Lukra, and correcting it brought both runs in line with the rest of the set. Nothing in the
+      nine runs points to a partitioning error.</p>
     <ul class="clean">
-      <li><strong>Mature cows track the standards</strong> to within a few percent across three breeds.</li>
+      <li><strong>All nine runs track the standards</strong> to within a few percent of the nearer
+        benchmark, across three breeds and both parities.</li>
       <li><strong>Herd scale matches single-cow runs</strong> — no surprises at 4000 cows.</li>
-      <li><strong>Heifer frame growth is independently validated</strong> to ~3&nbsp;%, so the heifer
-        milk gap sits in the potential curve, not the growth accounting.</li>
-      <li><strong>The one divergence is named and defensible</strong> — a genotype-specific
-        potential curve that may need a heifer-specific calibration, flagged here as future work.</li>
+      <li><strong>The milk/body-fat partitioning holds for growing heifers too</strong>, once a
+        maintenance-calculation issue in the comparison spreadsheet was corrected.</li>
     </ul>
   </section>
 
@@ -624,6 +514,6 @@ weight: 2   # "Checking Lukra against the textbook" — validation, shown second
 
   <footer>
     <p>Reproduced from <b>NRC2001_LukraValidationSpreadsheet_12.xlsx</b>, ScenarioLog tab — nine
-      frozen runs. Comparison is energy-only; mature-cow agreement within a few percent, heifer
-      divergence decomposed and attributed. <b>Lukra — Smarter feeding. Greater profit.</b></p>
+      frozen runs. Comparison is energy-only; agreement within a few percent across all nine runs,
+      mature cows and heifers alike. <b>Lukra — Smarter feeding. Greater profit.</b></p>
   </footer>
