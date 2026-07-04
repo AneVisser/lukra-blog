@@ -14,11 +14,13 @@ Most feed decisions on a pasture-based dairy farm get made one round at a time. 
 
 Lukra works at a different level, around a different question: **what feed plan makes the most money across the whole season?**
 
+The answer isn't a feed plan in the wedge sense — it's what we call an **optimised feed budget**: a whole-season allocation of feeds across periods, chosen because the numbers say it pays best.
+
 > "Enough feed" is a constraint, not a goal. Lukra treats it as the floor and optimises for the thing you actually care about — profit.
 
 ## What Lukra is, in one line
 
-Lukra is a whole-season feed-budget planner for pasture-based dairy — New Zealand and Australian systems, seasonal calving, twelve monthly periods across the year. You give it your farm, your herd and your feed options; it returns the feeding plan that maximises your annual **margin** (milk income minus feed and the costs that go with it).
+Lukra is a whole-season feed-budget planner for pasture-based dairy — New Zealand and Australian systems, seasonal calving, twelve monthly periods across the year. You give it your farm, your herd and your feed options; it returns the **optimised feed budget** that maximises your annual **margin** (milk income minus feed and the costs that go with it).
 
 The word doing the heavy lifting is *whole-season*. Lukra doesn't optimise this week and hope the rest falls into line. It plans all twelve periods together, because feed decisions are linked across time: condition you put on a cow in autumn is energy she draws on in spring; supplement you commit to in one month changes what's optimal in the next.
 
@@ -76,15 +78,21 @@ And it gives you more than the plan. Because of how the problem is solved, Lukra
   </div>
 </details>
 
+## Not the same job as a simulation model
+
+This is also where Lukra differs from **standalone simulation tools** — the kind where you set up a scenario, run it, look at the result, adjust something, and run it again. That approach can get you a *better* plan than the one you started with. It can't tell you whether it's found the *best* one. Every scenario you haven't tried is still unknown territory, and the only way to close that gap is to keep testing more of them by hand — which costs time, and still ends without a guarantee.
+
+Lukra doesn't compare a shortlist of scenarios — it solves for the best one directly, across all twelve periods and every feed at once. So instead of *"is this better than what I tried before?"* the question becomes *"is this the most profitable plan available, full stop?"* — and Lukra answers the second one.
+
 ## Where the feed wedge fits
 
-None of this makes the feed wedge wrong — it makes it *tactical*. A wedge is the right tool for the day-to-day decision: given the cover you've got right now, how much to graze, which paddocks, when to step in with supplement. What it can't do on its own is tell you what to aim for. It needs a target — a target milk yield, or a target pasture intake per period — and that target has to come from somewhere.
+All of this points to the same division: Lukra is the strategic layer, and the feed wedge is the tactical one. A wedge is the right tool for the day-to-day decision: given the cover you've got right now, how much to graze, which paddocks, when to step in with supplement. What it can't do on its own is tell you what to aim for. It needs a target — a target milk yield, or a target pasture intake per period — and that target has to come from somewhere.
 
 That's the layer Lukra sits in. It works out the strategic targets for the season — what production is worth chasing given prices and feed costs, how much pasture to plan to harvest in each period — and hands them down as the inputs a wedge tool runs on. With the target set, the wedge does what it does best: turn live pasture data into a sound grazing call, day by day.
 
-This is why Lukra doesn't compete with pasture-measurement tools — from a rising plate meter, to a towed or drive-over pasture meter, to the apps that turn cover readings into a feed wedge. It complements them. Once your pasture allowance is known, the open questions are exactly the ones Lukra answers: which supplements to buy, in what quantities, in which periods, and how to react when prices shift. Lukra sets the course for the season; pasture measurement helps you sail it — and the better that measurement, the sharper Lukra's answers.
+This is why Lukra doesn't compete with the tools that operate at the tactical layer — from a rising plate meter, to a towed or drive-over pasture meter, to the apps that turn cover readings into a feed wedge, to virtual fencing systems that can resize paddock allocations day to day. It complements all of them. Once the tactical call is made — a pasture allowance set, a paddock sized — the open questions are exactly the ones Lukra answers: which supplements to buy, in what quantities, in which periods, and how to react when prices shift. Lukra sets the course for the season; the tactical layer executes it — and the sharper that execution, the sharper Lukra's answers.
 
-Tighter, more automatic links to whatever you already use to measure pasture are a natural next step for us.
+Tighter, more automatic links to whatever you already use to measure or manage pasture are a natural next step for us.
 
 ## Built on a validated model
 

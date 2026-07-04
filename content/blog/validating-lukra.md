@@ -156,13 +156,25 @@ weight: 2   # "Checking Lukra against the textbook" — validation, shown second
       her back.</p>
     <div class="note warm">
       <span class="lbl">Context — the redesign this validates</span>
-      An earlier version of Lukra read the Hulme cost as a rising price on milk itself and, as a
-      result, under-predicted mid-lactation solids by as much as 30&nbsp;% against NRC. The redesign
-      keeps the Hulme equations but re-attributes that "expensive" portion to body fat — the explicit
-      partitioning above — which closed the gap to under 2&nbsp;% for a mature cow. This post asks the
-      next question: does that fix hold up across many herds, breeds and parities, and against the
-      newer 2021 standard?
+      Before beta testing began, Lukra went through a redesign of how it prices the most productive
+      part of a cow's output. This validation is the check that the redesign holds up — across
+      breeds, herds and both parities, and against a newer standard than the one it was originally
+      checked against.
     </div>
+    <details class="deep">
+      <summary>Go deeper: what the earlier version got wrong <span class="tag">for beta-testers</span></summary>
+      <div class="body">
+        <p>An earlier, pre-beta version of Lukra read the Hulme cost as a rising price on milk
+          itself. In effect, the "expensive" portion of high production was priced away rather than
+          redirected anywhere — body fat effectively went missing from the ledger, and the implied
+          efficiency of that marginal milk was extremely low. The result was a mid-lactation
+          under-prediction of milk solids by as much as 30&nbsp;% against NRC&nbsp;2001.</p>
+        <p>The redesign keeps the underlying Hulme equations but re-attributes that expensive portion
+          explicitly to body fat — the partitioning described above — which closed the gap to under
+          2&nbsp;% for a mature cow. This post is the follow-up question: does that fix hold up
+          across many herds, breeds and parities, and against the newer 2021 standard?</p>
+      </div>
+    </details>
   </section>
 
   <!-- ================= MATURE COW CHART ================= -->
@@ -434,11 +446,22 @@ weight: 2   # "Checking Lukra against the textbook" — validation, shown second
   <!-- ================= HEIFER DIVERGENCE ================= -->
   <section class="reveal">
     <h2>The honest one: heifers</h2>
-    <p>A first-lactation heifer is not a clean test of an energy ceiling, and it's worth being
-      upfront about why. She is still growing, she is lighter than a mature cow, and her milk is
-      shaped more by her lactation curve and by how she mobilises reserves than by a simple energy
-      residual. Lukra has a curve; the energy-allowable conversion does not. So the two
-      <em>should</em> diverge more for a heifer than for a mature cow — and they do.</p>
+    <p>For a mature cow, the two ways of computing milk agree well because, in effect, both are
+      checking the same thing: how much energy is left once maintenance, pregnancy and body-condition
+      change are paid for. For a heifer, the comparison works a little differently, and it's worth
+      being upfront about why.</p>
+    <p>The NRC/NASEM side doesn't independently verify how much milk this heifer <em>should</em> be
+      able to produce. It takes Lukra's own weight-gain and body-condition numbers as given, and
+      simply works out what's left over for milk once maintenance and pregnancy are subtracted. So
+      it's really a consistency check on Lukra's numbers, not an outside check on Lukra's
+      genetic-potential curve.</p>
+    <p>Lukra, on the other hand, has an explicit ceiling: a genotype-specific potential curve that
+      sets how much milk the linear program is allowed to produce each month, before any surplus
+      energy is redirected to body fat. For a mature cow that curve is evidently well calibrated —
+      the close agreement across breeds says so. For the Kiwi&nbsp;Cross heifer specifically, we
+      think it's set a touch high for this life stage. It's built from breed-proportion equations
+      (Lopez-Villalobos) that were fit mainly against mature-cow behaviour, and a first-lactation
+      heifer's true potential may sit a little lower than that average implies.</p>
     <figure class="hero" style="background:var(--mist)"><svg viewBox="0 0 760 312" role="img" aria-label="Monthly milk solids for a Kiwi Cross heifer: Lukra runs above both NRC standards through early and mid lactation">
 <line class="grid" x1="52" y1="272.0" x2="742" y2="272.0"/>
 <text class="ytick" x="44" y="276.0">0.3</text>
@@ -507,32 +530,35 @@ weight: 2   # "Checking Lukra against the textbook" — validation, shown second
     <p class="cap">For the heifer, Lukra predicts <em>more</em> milk than either standard through
       early and mid lactation, then dips below NRC&nbsp;2001 late. Over the season that nets to
       +4.9&nbsp;% vs 2001 (+23.2&nbsp;% vs the tougher 2021 line).</p>
-    <p>Crucially, this is not the growth physics being wrong. The spreadsheet computes the heifer's
-      energy of gain <em>itself</em>, from her weight trajectory, without importing Lukra's figure —
-      and the two agree to within about 3&nbsp;%. So frame growth checks out independently; the milk
-      difference comes from elsewhere, and we can decompose exactly where.</p>
+    <p>This isn't the growth physics being wrong. Frame (skeletal) growth is computed the same way
+      regardless of the potential curve, and the spreadsheet reconstructs the heifer's energy of
+      gain independently from her weight trajectory, without importing Lukra's figure — the two
+      agree to within about 3&nbsp;%. So the structural side of growth checks out on its own; the
+      milk difference sits specifically in how much of the spare energy is allowed into milk versus
+      body fat, and we can explain exactly why.</p>
     <details class="deep">
-      <summary>Go deeper: the term-by-term energy audit <span class="tag">for beta-testers</span></summary>
+      <summary>Go deeper: why the two methods agree everywhere except milk <span class="tag">for beta-testers</span></summary>
       <div class="body">
-        <p>Where Lukra and NRC differ on the heifer, it traces to specific energy sinks, not a
-          milk-partitioning error:</p>
-        <ul class="clean">
-          <li><strong>Maintenance, weight-tracked.</strong> Lukra follows the heifer's actual rising
-            weight period by period. Through mid-lactation the lighter growing animal has lower
-            maintenance than a fixed mature-weight assumption allows — so more energy is free for
-            milk, and Lukra predicts more.</li>
-          <li><strong>Pregnancy.</strong> Lukra's conceptus model charges more energy in late
-            gestation, which is part of why its late-lactation milk drops below the NRC line.</li>
-          <li><strong>A small, steady grazing/activity offset</strong> runs through the whole
-            lactation.</li>
-        </ul>
-        <p>Add those up and the heifer gap is fully accounted for by where the energy is spent —
-          the partitioning of what's left into milk is behaving correctly throughout.</p>
-        <p>There's a sharper version of this finding. If you reconstruct milk from a pure energy
-          balance, you reproduce NRC's prediction exactly (to ±0.002&nbsp;kg) — but you do
-          <em>not</em> reproduce Lukra's, because Lukra's milk comes from the LP's partitioning, not
-          from an energy residual. That measurable gap <em>is</em> the partitioning model, observed
-          directly.</p>
+        <p>Maintenance, pregnancy and body-fat energy costs all land close together between Lukra
+          and the NRC/NASEM comparison for this heifer — which is itself informative. If those terms
+          matched but milk didn't, the difference can't be an accounting error in any of them; it
+          has to sit upstream, in how much energy is allowed to become milk in the first place.</p>
+        <p>That's the potential curve. The NRC/NASEM side has no independent opinion on it — it
+          takes Lukra's reported body-condition change as an input, works out the energy that
+          implies, and treats whatever's left as milk. So the two methods aren't independently
+          arriving at a milk number and comparing; the NRC side is, in effect, checking that Lukra's
+          own numbers are internally consistent, not testing whether the potential curve itself is
+          right.</p>
+        <p>If the potential curve for this genotype and life stage were slightly flatter, Lukra
+          would send a little less energy to milk and a little more to body fat every month.
+          Because the NRC/NASEM side takes that body-fat number as its input, its own energy
+          accounting would shift in step — and the two methods would land closer together on their
+          own, without anything about the underlying accounting changing. That's the signature of a
+          calibration question in the potential curve, not a partitioning bug: fixing the curve,
+          not the accounting, is what would close this gap.</p>
+        <p>This is a genotype-calibration question we plan to revisit — likely using Daniel
+          et&nbsp;al.'s work on potential-curve "pivoting" by breed and life stage — rather than
+          something this validation resolves on its own.</p>
       </div>
     </details>
   </section>
@@ -567,17 +593,18 @@ weight: 2   # "Checking Lukra against the textbook" — validation, shown second
     <h2>The verdict</h2>
     <p>The energy accounting holds. For mature cows — the case where milk is genuinely
       energy-limited and the comparison is like-for-like — Lukra tracks the modern standards within
-      a few percent across every breed we ran. Where it diverges, on growing heifers, the difference
-      decomposes cleanly into named energy sinks and the behaviour of a lactation curve the textbook
-      conversion simply doesn't have. Nothing in the nine runs points to a partitioning error; the
-      one outlier is the model correctly being more than a bookkeeping residual.</p>
+      a few percent across every breed we ran. Where it diverges, on the Kiwi&nbsp;Cross heifer, the
+      difference traces to how that genotype's milk-potential curve is calibrated at this life
+      stage — not to an error in the underlying energy accounting, which checks out to the same
+      standard everywhere else. Nothing in the nine runs points to a partitioning error; the one
+      outlier flags a calibration question worth revisiting, not a mechanism that doesn't work.</p>
     <ul class="clean">
       <li><strong>Mature cows track the standards</strong> to within a few percent across three breeds.</li>
       <li><strong>Herd scale matches single-cow runs</strong> — no surprises at 4000 cows.</li>
-      <li><strong>Heifer growth is independently validated</strong> to ~3&nbsp;%, so the heifer milk
-        gap is partitioning behaviour, not a bug.</li>
-      <li><strong>The one divergence is named and defensible</strong> — weight-tracked maintenance,
-        pregnancy, and a curve the energy ceiling lacks.</li>
+      <li><strong>Heifer frame growth is independently validated</strong> to ~3&nbsp;%, so the heifer
+        milk gap sits in the potential curve, not the growth accounting.</li>
+      <li><strong>The one divergence is named and defensible</strong> — a genotype-specific
+        potential curve that may need a heifer-specific calibration, flagged here as future work.</li>
     </ul>
   </section>
 
