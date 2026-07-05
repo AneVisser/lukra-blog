@@ -498,7 +498,7 @@ weight: 2   # "Checking Lukra against the textbook" — validation, shown second
     </ul>
   </section>
 
-
+<!-- TODO: replace with footer nav partial once built -->
 **New to Lukra?** Start with the overview: [what it is and why it plans for profit](/blog/introducing-lukra/)
 
   <!-- ================= REFERENCES ================= -->
