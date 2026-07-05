@@ -498,6 +498,9 @@ weight: 2   # "Checking Lukra against the textbook" — validation, shown second
     </ul>
   </section>
 
+
+**New to Lukra?** Start with the overview: [what it is and why it plans for profit](/blog/introducing-lukra/)
+
   <!-- ================= REFERENCES ================= -->
   <section class="reveal">
     <h2>References &amp; sources</h2>
