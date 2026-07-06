@@ -14,6 +14,7 @@
         <div class="page-card">
             <div class="wrap">
                 <article class="post-body">{{ .Content }}</article>
+                {{ partial "post-meta.html" . }}  {{/* author byline — posts only, sits above the footer */}}
                 {{ partial "post-footer.html" . }}
             </div>
         </div>

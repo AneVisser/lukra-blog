@@ -1,0 +1,22 @@
+{{/* Post author byline.
+
+Rendered at the foot of blog posts (see blog/single.html), just above
+the global tagline footer. Not used on standalone pages.
+
+The author name comes from the post's front-matter `author:` field if it
+is set, otherwise falls back to the site's default author. The default
+author links to the About page; a custom author (e.g. a future guest
+post) is shown as plain text, since no per-author page exists yet.
+
+To attribute a post to someone else later, add to its front-matter:
+author: Their Name
+*/}}
+{{ $defaultAuthor := "Ane Visser" }}
+{{ $author := .Params.author | default $defaultAuthor }}
+<p class="post-author">
+    {{ if eq $author $defaultAuthor -}}
+    By <a href="/about/">{{ $author }}</a>
+    {{- else -}}
+    By {{ $author }}
+    {{- end }}
+</p>

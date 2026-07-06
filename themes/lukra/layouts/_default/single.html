@@ -1,0 +1,34 @@
+{{/* Default single-page template.
+
+Renders standalone content pages that live OUTSIDE the blog section
+(e.g. /about/, and any future /terms/, /privacy/, /who-is-lukra-for/).
+Blog posts use layouts/blog/single.html instead; this template
+deliberately drops the blog-only chrome — the published date and the
+"All posts" back-link — so fixed pages don't inherit post semantics.
+
+Reuses the shared page-banner and post-footer partials rather than
+introducing new ones, so standalone pages match the rest of the site.
+
+Optional front-matter overrides:
+eyebrow, stand        - passed through to the banner if present
+backHref, backLabel   - back-button target/label (defaults: "/", "← Home")
+*/}}
+{{ define "main" }}
+<div class="lukra-root lukra-home">
+    {{ partial "page-banner.html" (dict
+    "title" .Title
+    "eyebrow" .Params.eyebrow
+    "stand" .Params.stand
+    "backHref" (.Params.backHref | default "/")
+    "backLabel" (.Params.backLabel | default "← Home")
+    ) }}
+    <div class="masthead-home-photo page-photo-framed">
+        <div class="page-card">
+            <div class="wrap">
+                <article class="post-body">{{ .Content }}</article>
+                {{ partial "post-footer.html" . }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
