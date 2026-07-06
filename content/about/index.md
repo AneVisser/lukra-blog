@@ -47,8 +47,10 @@ Thinking it through for the New Zealand situation, and reading the scientific li
 reached the conclusion that became Lukra's core idea: for pasture-based dairy, **profit
 maximisation is a better objective than least-cost formulation** — and least-cost is really
 just a special case of profit maximisation that happens to hold under certain conditions,
-such as a high milk price. Optimise for margin, and "least cost" falls out of it when that
-genuinely is the right answer — and something better falls out when it isn't.
+such as a high milk price. Optimise for margin, and the least-cost ration is exactly what 
+you get whenever cutting feed cost happens to be the most profitable move — and when it isn't, 
+you get a more profitable plan instead. Optimising for profit can never do worse than 
+optimising for cost alone, and often does better.
 
 ## Track record, honestly
 
